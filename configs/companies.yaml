@@ -1,0 +1,54 @@
+# Starter sources. Add more rows here to scale this up to your full top-100 target list.
+companies:
+  - company: Datadog
+    source_type: greenhouse
+    enabled: true
+    careers_url: https://careers.datadoghq.com/
+    board_token: datadog
+    notes: Public Greenhouse board.
+
+  - company: Airtable
+    source_type: greenhouse
+    enabled: true
+    careers_url: https://airtable.com/careers
+    board_token: airtable
+    notes: Public Greenhouse board.
+
+  - company: Coinbase
+    source_type: greenhouse
+    enabled: true
+    careers_url: https://www.coinbase.com/careers
+    board_token: coinbase
+    notes: Public Greenhouse board.
+
+  - company: Robinhood
+    source_type: greenhouse
+    enabled: true
+    careers_url: https://careers.robinhood.com/
+    board_token: robinhood
+    notes: Public Greenhouse board.
+
+  - company: Reddit
+    source_type: greenhouse
+    enabled: true
+    careers_url: https://www.redditinc.com/careers
+    board_token: reddit
+    notes: Public Greenhouse board.
+
+  - company: Figma
+    source_type: greenhouse
+    enabled: true
+    careers_url: https://www.figma.com/careers/
+    board_token: figma
+    notes: Public Greenhouse board.
+
+  - company: Sample Generic Company
+    source_type: generic_html
+    enabled: false
+    list_url: https://example.com/careers
+    selectors:
+      job_selector: a[href*='/careers/']
+      detail_title_selector: h1
+      detail_location_selector: .job-location
+      detail_description_selector: .job-description
+    notes: Example fallback when a company does not use a supported ATS API.

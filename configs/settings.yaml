@@ -1,0 +1,65 @@
+# Update the email section before enabling SMTP delivery.
+llm:
+  model: qwen2.5:7b-instruct
+  endpoint: http://127.0.0.1:11434
+  temperature: 0.2
+  timeout_seconds: 180
+
+filters:
+  max_experience_years: 3.0
+  max_roles_per_run: 4
+  preferred_role_keywords:
+    - machine learning engineer
+    - ml engineer
+    - ai engineer
+    - ai research
+    - research engineer
+    - research scientist
+    - data scientist
+    - data engineer
+    - analytics engineer
+    - software engineer
+    - backend engineer
+    - python developer
+  blocked_title_keywords:
+    - senior
+    - staff
+    - principal
+    - lead
+    - manager
+    - director
+    - head
+    - vp
+    - architect
+  entry_title_keywords:
+    - junior
+    - entry
+    - graduate
+    - new grad
+    - analyst
+    - trainee
+    - apprentice
+    - intern
+  allow_unknown_experience: true
+
+email:
+  enabled: false
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  username: luciferakshayoffical@gmail.com
+  password_env: RESUME_AGENT_SMTP_PASSWORD
+  from_address: luciferakshayoffical@gmail.com
+  to_addresses:
+    - luciferakshayoffical@gmail.com
+  use_tls: true
+
+storage:
+  state_db_path: data/agent_state.sqlite3
+  output_dir: output
+  logs_dir: logs
+
+scrape:
+  request_timeout_seconds: 30
+  user_agent: ResumeJobAgent/0.1 (local resume tailoring bot; respectful rate limits)
+  pause_seconds: 0.5
+  verify_tls: true

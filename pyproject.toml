@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobgraph"
+version = "0.1.0"
+description = "JobGraph: AI-Powered Career Automation."
+requires-python = ">=3.11"
+dependencies = [
+  "beautifulsoup4>=4.12.3",
+  "openpyxl>=3.1.5",
+  "python-docx>=1.1.2",
+  "PyYAML>=6.0.2",
+  "requests>=2.32.3",
+]
+
+[project.scripts]
+jobgraph = "jobgraph.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
